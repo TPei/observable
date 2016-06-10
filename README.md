@@ -50,7 +50,7 @@ class Observing
   include Observer
 
   def notify(observable : Observable)
-    @notified = true
+    # do whatever you want to do if your observable changes
   end
 end
 ```
