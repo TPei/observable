@@ -57,4 +57,4 @@ end
 ```
 This only gives you an `update(observable : Observable)` method you should override, because it willl raise an error otherwise.
 
-Unfortunately we don't have ruby's verbosity and dynamism here so it's all a little more static. Especially the `notify` method can really only pass the on the `observable` object.
+Unfortunately we don't have ruby's verbosity and dynamism here so it's all a little more static. Especially the `update` method can really only pass on the `observable` object.
