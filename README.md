@@ -23,7 +23,7 @@ $ crystal deps
 Include observable in the class you want to observe:
 
 ```crystal
-require "observable"
+require "observable/observable"
 
 class ToObserve
   include Observable
@@ -45,16 +45,16 @@ and as an added bonus because I dislike the forced `changed` call precondition:
 Then you can include observer in the class you want observing:
 
 ```crystal
-require "observer"
+require "observable/observer"
 
 class Observing
   include Observer
 
-  def notify(observable : Observable)
+  def update(observable : Observable)
     # do whatever you want to do if your observable changes
   end
 end
 ```
-This only gives you an `notify(observable : Observable)` method you should override, because it willl raise an error otherwise.
+This only gives you an `update(observable : Observable)` method you should override, because it willl raise an error otherwise.
 
 Unfortunately we don't have ruby's verbosity and dynamism here so it's all a little more static. Especially the `notify` method can really only pass the on the `observable` object.
