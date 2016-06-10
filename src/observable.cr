@@ -30,7 +30,7 @@ module Observable
     return unless @changed
 
     @observers.each do |observer|
-      observer.notify(self)
+      observer.update(self)
     end
 
     @changed = false
@@ -38,7 +38,7 @@ module Observable
 
   def alert_observers
     @observers.each do |observer|
-      observer.notify(self)
+      observer.update(self)
     end
   end
 end

@@ -11,7 +11,7 @@ class Observing
 
   @notified = false
 
-  def notify(observable : Observable)
+  def update(observable : Observable)
     @notified = true
   end
 

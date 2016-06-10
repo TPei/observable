@@ -1,5 +1,5 @@
 module Observer
-  def notify(observable : Observable)
+  def update(observable : Observable)
     raise "implement me"
   end
 end
