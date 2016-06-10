@@ -1,4 +1,4 @@
-# Observable [![Build Status](https://travis-ci.org/TPei/observable.svg?branch=master)](https://travis-ci.org/TPei/observable)
+# observable [![Build Status](https://travis-ci.org/TPei/observable.svg?branch=master)](https://travis-ci.org/TPei/observable)
 Simple implementation of the Observer pattern in Crystal. It is loosely based on the [Observable](http://ruby-doc.org/stdlib-2.0.0/libdoc/observer/rdoc/Observable.html) module from Ruby :)
 
 ## Installation
