@@ -30,12 +30,28 @@ describe "Observable" do
     end
   end
 
-  describe "#changed?" do
-    it "it returns the current changed status (true / false)" do
-      to = ToObserve.new
-      to.changed?.should eq false
-      to.changed
-      to.changed?.should eq true
+  describe "#changed" do
+    context "with value given" do
+      it "it allows for setting of changed state" do
+        to = ToObserve.new
+        to.changed?.should eq false
+        to.changed(true)
+        to.changed?.should eq true
+        to.changed(false)
+        to.changed?.should eq false
+      end
+    end
+
+    context "without value given" do
+      it "sets changed to true" do
+        to = ToObserve.new
+        to.changed?.should eq false
+        to.changed
+        to.changed?.should eq true
+
+        to.changed(false)
+        to.changed?.should eq false
+      end
     end
   end
 

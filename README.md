@@ -31,7 +31,7 @@ end
 ```
 This provies you with the following methods:
 - `add_observer(observer : Observer)`
-- `changed`
+- `changed(state=true)`
 - `changed?`
 - `count_observers`
 - `delete_observer(observer : Observer)`

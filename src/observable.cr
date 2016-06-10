@@ -6,8 +6,8 @@ module Observable
     @changed
   end
 
-  def changed
-    @changed = true
+  def changed(state = true)
+    @changed = state
   end
 
   def add_observer(observer : Observer)
