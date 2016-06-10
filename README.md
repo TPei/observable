@@ -38,8 +38,8 @@ This provies you with the following methods:
 - `delete_observers`
 - `notify_observers`
 
-and as an added bonus because I dislike the forced `changed` call precondition:
-- `alert_observers`, which notifies no matter if changed of not
+and as an added bonus, because I dislike the forced `changed` call precondition:
+- `alert_observers`, which notifies no matter if changed or not
 
 
 Then you can include observer in the class you want observing:
