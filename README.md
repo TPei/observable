@@ -7,7 +7,7 @@ Add to your shard.yml
 
 ```yaml
 dependencies:
-  circuit_breaker:
+  observable:
     github: tpei/observable
     branch: master
 ```
