@@ -29,7 +29,7 @@ class ToObserve
   include Observable
 end
 ```
-This provies you with the following methods:
+This provides you with the following methods:
 - `add_observer(observer : Observer)`
 - `changed(state=true)`
 - `changed?`
