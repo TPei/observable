@@ -1,6 +1,11 @@
 # observable [![Build Status](https://travis-ci.org/TPei/observable.svg?branch=master)](https://travis-ci.org/TPei/observable)
 Simple implementation of the Observer pattern in Crystal. It is loosely based on the [Observable](http://ruby-doc.org/stdlib-2.0.0/libdoc/observer/rdoc/Observable.html) module from Ruby :)
 
+The observer pattern is used to avoid tightly coupling objects that
+stand in a one-to-many relationship.
+It allows you to notify dependents about changes that happened to your
+object, without having hard-coded dependencies :)
+
 ## Installation
 
 Add to your shard.yml
