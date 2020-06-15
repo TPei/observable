@@ -36,9 +36,14 @@ module Observable
     @changed = false
   end
 
-  def alert_observers
+  def notify_observers!
     @observers.each do |observer|
       observer.update(self)
     end
+  end
+
+  @[Deprecated("Use `#notify_observers!` instead")]
+  def alert_observers
+    notify_observers!
   end
 end

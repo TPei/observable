@@ -59,18 +59,18 @@ describe "Observable" do
     it "adds and observer to the observers array" do
       to = ToObserve.new
       obs = Observing.new
-      
+
       to.count_observers.should eq 0
       to.add_observer obs
       to.count_observers.should eq 1
     end
   end
-  
+
   describe "#count_observers" do
     it "returns the number of listed observers" do
       to = ToObserve.new
       obs = Observing.new
-      
+
       to.count_observers.should eq 0
       to.add_observer obs
       to.count_observers.should eq 1
@@ -127,7 +127,7 @@ describe "Observable" do
         to.count_observers.should eq 2
         to.changed
         to.notify_observers
-        
+
         obs.notified?.should eq true
         obs2.notified?.should eq true
       end
@@ -144,14 +144,14 @@ describe "Observable" do
         to.add_observer obs2
         to.count_observers.should eq 2
         to.notify_observers
-        
+
         obs.notified?.should eq false
         obs2.notified?.should eq false
       end
     end
   end
-  
-  describe "#alert_observers" do
+
+  describe "#notify_observers!" do
     context "changed is set" do
       it "calls notify on all observing objects" do
         to = ToObserve.new
@@ -163,8 +163,8 @@ describe "Observable" do
         to.add_observer obs2
         to.count_observers.should eq 2
         to.changed
-        to.notify_observers
-        
+        to.notify_observers!
+
         obs.notified?.should eq true
         obs2.notified?.should eq true
       end
@@ -180,9 +180,46 @@ describe "Observable" do
         to.add_observer obs
         to.add_observer obs2
         to.count_observers.should eq 2
+        to.notify_observers!
+
+        obs.notified?.should eq true
+        obs2.notified?.should eq true
+      end
+    end
+  end
+
+  describe "#alert_observers" do
+    # #alert_observers is deprecated, use #notify_observers! instead
+    context "changed is set" do
+      it "calls notify on all observing objects" do
+        to = ToObserve.new
+        obs = Observing.new
+        obs2 = Observing.new
+
+        to.count_observers.should eq 0
+        to.add_observer obs
+        to.add_observer obs2
+        to.count_observers.should eq 2
         to.changed
-        to.notify_observers
-        
+        to.alert_observers
+
+        obs.notified?.should eq true
+        obs2.notified?.should eq true
+      end
+    end
+
+    context "changed is not set" do
+      it "calls notify on all observing objects" do
+        to = ToObserve.new
+        obs = Observing.new
+        obs2 = Observing.new
+
+        to.count_observers.should eq 0
+        to.add_observer obs
+        to.add_observer obs2
+        to.count_observers.should eq 2
+        to.alert_observers
+
         obs.notified?.should eq true
         obs2.notified?.should eq true
       end
