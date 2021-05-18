@@ -1,4 +1,7 @@
 # observable [![Build Status](https://travis-ci.org/TPei/observable.svg?branch=master)](https://travis-ci.org/TPei/observable)
+
+###### This project is being built once a month with the latest crystal version (works with v1.0.0 🎉)
+
 Simple implementation of the Observer pattern in Crystal. It is loosely based on the [Observable](http://ruby-doc.org/stdlib-2.0.0/libdoc/observer/rdoc/Observable.html) module from Ruby :)
 
 The observer pattern is used to avoid tightly coupling objects that
