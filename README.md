@@ -1,4 +1,4 @@
-# observable [![Build Status](https://travis-ci.org/TPei/observable.svg?branch=master)](https://travis-ci.org/TPei/observable)
+# observable
 
 ###### This project is being built weekly with the latest crystal version (works with v1.7.2 🎉)
 
